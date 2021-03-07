@@ -90,30 +90,31 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  .hero {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3/4;
-    height: auto;
-  }
-  .hero img {
-    height: 500px;
-    width: 20vh;
-  }
-  .details {
+  .page .details {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
     -ms-grid-column-span: 1;
-    grid-column: 2/3;
+    grid-column: 3/4;
     text-align: center;
   }
-  .details h1 {
-    font-size: 48px;
+  .page .details h1 {
+    font-size: 36px;
   }
-  .details h2 {
-    font-size: 38px;
+  .page .details h2 {
+    font-size: 32px;
+  }
+  .page .hero {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    text-align: center;
+    height: auto;
+  }
+  .page .hero img {
+    height: 500px;
+    width: 28vh;
   }
   .story,
   .my-work {
@@ -135,6 +136,21 @@ img {
   .profile {
     padding-top: 30px;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero img {
+    height: 0px;
+  }
+  .details h1 {
+    font-size: 38px;
+  }
+  .details h2 {
+    font-size: 28px;
+  }
+  .details {
+    margin-left: 20%;
   }
 }
 

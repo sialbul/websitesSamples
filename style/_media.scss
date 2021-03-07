@@ -3,24 +3,25 @@
         grid-template-columns: 5% 1fr 5%;
         grid-template-rows: 2fr 1fr;
         align-items: center;
-    }
-    .hero {
-        grid-column: 3/4;
-        height: auto;
-        img {
-            height: 500px;
-            width: 20vh;
+        .details {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            text-align: center;
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 32px;
+            }
         }
-    }
-    .details {
-        grid-row: 2/3;
-        grid-column: 2/3;
-        text-align: center;
-        h1 {
-            font-size: 48px;
-        }
-        h2 {
-            font-size: 38px;
+        .hero {
+            grid-column: 3/4;
+            text-align: center;
+            height: auto;
+            img {
+                height: 500px;
+                width: 28vh;
+            }
         }
     }
     .story,
@@ -38,5 +39,20 @@
     .profile {
         padding-top: 30px;
         text-align: center;
+    }
+}
+
+@media(max-width: 768px) {
+    .hero img {
+        height: 0px;
+    }
+    .details h1 {
+        font-size: 38px;
+    }
+    .details h2 {
+        font-size: 28px;
+    }
+    .details {
+        margin-left: 20%;
     }
 }
