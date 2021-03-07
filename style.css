@@ -1,1 +1,120 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Photography World</title><link rel="stylesheet" href="./style.css"></head><body><div class="portfolio"><header><nav><h3 class="logo">Photography World</h3><svg viewBox="0 0 100 80" width="40" height="40"><rect width="100" height="20"></rect><rect y="30" width="100" height="20"></rect><rect y="60" width="100" height="20"></rect></svg></nav></header></div></body></html>
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PopLight;
+  src: url("./Poppins/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: Popregular;
+  src: url("./Poppins/Poppins-Medium.ttf");
+}
+
+body {
+  font-family: PopLight;
+}
+
+.portfolio {
+  color: white;
+  background: radial-gradient(#2b3760, #0b1023);
+}
+
+#menulogo {
+  width: 6vh;
+  height: 6vh;
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.page {
+  min-height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 1fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero img {
+  height: 500px;
+  -webkit-transition: trasform 0.3s ease-out;
+  transition: trasform 0.3s ease-out;
+  cursor: pointer;
+}
+
+.hero:hover .model-right {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.hero:hover .model-left {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.model-right {
+  -webkit-transform: translate(0%, 10%);
+          transform: translate(0%, 10%);
+}
+
+.model-left {
+  -webkit-transform: translate(0%, -10%);
+          transform: translate(0%, -10%);
+}
+
+.details {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.details h1 {
+  font-size: 42px;
+  font-family: Popregular;
+}
+
+.details h2 {
+  font-size: 32px;
+  padding: 20px 0px;
+}
+
+.details p {
+  font-size: 20px;
+  padding: 20px 0px 50px 0px;
+}
+/*# sourceMappingURL=style.css.map */
