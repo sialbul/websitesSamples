@@ -1,28 +1,26 @@
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
     .page {
         grid-template-columns: 5% 1fr 5%;
         grid-template-rows: 2fr 1fr;
         align-items: center;
-        .details {
-            grid-row: 2/3;
-            grid-column: 3/4;
-            text-align: center;
-            h1 {
-                font-size: 36px;
-            }
-            h2 {
-                font-size: 32px;
-            }
-        }
-        .hero {
-            grid-column: 3/4;
-            text-align: center;
-            height: auto;
-            img {
-                height: 500px;
-                width: 28vh;
-            }
-        }
+    }
+    .hero {
+        grid-column: 2/3;
+        height: auto;
+    }
+    .hero img {
+        height: 500px;
+    }
+    .details {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    .details h1 {
+        font-size: 48px;
+    }
+    .details h2 {
+        font-size: 38px;
     }
     .story,
     .my-work {
@@ -42,17 +40,14 @@
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .hero img {
-        height: 0px;
+        height: 400px;
     }
     .details h1 {
         font-size: 38px;
     }
     .details h2 {
         font-size: 28px;
-    }
-    .details {
-        margin-left: 20%;
     }
 }

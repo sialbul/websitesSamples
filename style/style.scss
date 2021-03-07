@@ -30,6 +30,13 @@ body {
     height: 6vh;
 }
 
+.social {
+    img {
+        width: 3vh;
+        height: 3vh;
+    }
+}
+
 nav {
     min-height: 10vh;
     width: 90%;
@@ -50,6 +57,16 @@ nav {
     grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
 
+.chef,
+.artist {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .hero {
     overflow: hidden;
     height: 500px;
@@ -60,6 +77,9 @@ nav {
         height: 500px;
         transition: trasform 0.3s ease-out;
         cursor: pointer;
+    }
+    a {
+        display: flex;
     }
     &:hover .model-right {
         transform: translate(0%, 0%);
@@ -79,7 +99,7 @@ nav {
 
 .details {
     grid-column: 2/3;
-    align-self: flex-end;
+    align-self: end;
     h1 {
         font-size: 42px;
         font-family: Popregular;
@@ -127,5 +147,60 @@ nav {
     }
     100% {
         transform: scale(4);
+    }
+}
+
+@media (max-width: 1024px) {
+    .page {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+    }
+    .hero {
+        grid-column: 2/3;
+        height: auto;
+    }
+    .hero img {
+        height: 500px;
+        width: 80%;
+    }
+    .details {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    .details h1 {
+        font-size: 48px;
+    }
+    .details h2 {
+        font-size: 38px;
+    }
+    .story,
+    .my-work {
+        flex-direction: column;
+    }
+    .story-description,
+    .work-description {
+        width: 100%;
+    }
+    .work-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .profile {
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        height: 400px;
+    }
+    .details h1 {
+        font-size: 38px;
+    }
+    .details h2 {
+        font-size: 28px;
     }
 }
