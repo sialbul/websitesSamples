@@ -1,4 +1,5 @@
 @import "./pages";
+@import "./media";
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +8,12 @@
 
 @font-face {
     font-family: PopLight;
-    src: url('./Poppins/Poppins-Light.ttf')
+    src: url('../Poppins/Poppins-Light.ttf')
 }
 
 @font-face {
     font-family: Popregular;
-    src: url('./Poppins/Poppins-Medium.ttf')
+    src: url('../Poppins/Poppins-Medium.ttf')
 }
 
 body {

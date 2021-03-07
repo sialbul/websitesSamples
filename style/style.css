@@ -49,6 +49,7 @@
 .story-description,
 .work-description {
   width: 80%;
+  font-family: Popregular;
 }
 
 .story-description h3,
@@ -76,7 +77,65 @@ img {
 
 .work-gallery img {
   height: 35vh;
-  width: 30vh;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    -ms-grid-columns: 5% 1fr 5%;
+        grid-template-columns: 5% 1fr 5%;
+    -ms-grid-rows: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    height: auto;
+  }
+  .hero img {
+    height: 500px;
+    width: 20vh;
+  }
+  .details {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .details h1 {
+    font-size: 48px;
+  }
+  .details h2 {
+    font-size: 38px;
+  }
+  .story,
+  .my-work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .story-description,
+  .work-description {
+    width: 100%;
+  }
+  .work-gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .profile {
+    padding-top: 30px;
+    text-align: center;
+  }
 }
 
 * {
@@ -88,12 +147,12 @@ img {
 
 @font-face {
   font-family: PopLight;
-  src: url("./Poppins/Poppins-Light.ttf");
+  src: url("../Poppins/Poppins-Light.ttf");
 }
 
 @font-face {
   font-family: Popregular;
-  src: url("./Poppins/Poppins-Medium.ttf");
+  src: url("../Poppins/Poppins-Medium.ttf");
 }
 
 body {

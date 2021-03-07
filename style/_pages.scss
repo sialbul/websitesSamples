@@ -39,6 +39,7 @@
 .story-description,
 .work-description {
     width: 80%;
+    font-family: Popregular;
     h3 {
         font-size: 36px;
         padding-bottom: 30px;
@@ -58,6 +59,6 @@ img {
     grid-template-columns: repeat(3, 200px);
     img {
         height: 35vh;
-        width: 30vh;
+        width: 100%;
     }
 }
