@@ -69,7 +69,6 @@ function init() {
         current = pageNumber;
     }
 
-    //OPTIONAL
     document.addEventListener("wheel", throttle(scrollChange, 1500));
     document.addEventListener("touchmove", throttle(scrollChange, 1500));
 
