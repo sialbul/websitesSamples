@@ -2,6 +2,7 @@
 @import "features";
 @import "soon";
 @import "footer";
+@import "slide";
 html {
     font-size: 62.5%;
 }
@@ -50,6 +51,18 @@ a {
     text-decoration: none;
 }
 
+.newHome {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(#fef9f3, #131313);
+    h1 {
+        margin: 0;
+        color: black;
+    }
+}
+
 @import "home";
 @import "features";
 @import "soon";
@@ -70,15 +83,21 @@ a {
     }
     .showcase {
         grid-template-columns: 10% 1fr 10%;
-        img {
-            width: 100%;
-            object-fit: contain;
+        .fling-minislide {
+            grid-column: 2/3;
         }
-        img,
+        .fling-minislide img {
+            position: absolute;
+            animation: fling-minislide 20s infinite;
+            opacity: 0;
+            width: 100%;
+            height: auto;
+        }
         h2,
         .info {
             grid-column: 2/3;
             text-align: center;
+            margin: 5vh;
         }
     }
     .features {
@@ -96,12 +115,14 @@ a {
     }
     .soon {
         overflow: hidden;
-        img {
-            width: 60%;
-        }
         h2 {
-            font-size: 5rem;
+            top: 20%;
+            font-size: 4rem;
             text-align: center;
+        }
+        .circle {
+            height: 40vh;
+            width: 40vh;
         }
     }
     footer {

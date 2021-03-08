@@ -136,13 +136,13 @@ function throttle(func, limit) {
 }
 
 init();
-var slideIndex = 0;
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    var i;
-    var slideshow = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
+    let i;
+    let slideshow = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
     for (i = 0; i < slideshow.length; i++) {
         slideshow[i].style.display = "none";
     }

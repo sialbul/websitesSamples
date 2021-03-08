@@ -1,13 +1,14 @@
 .home {
-  background: radial-gradient(#fef9f3, #219f94);
+  background: radial-gradient(#fef9f3, #131313);
 }
 
 .nav-container {
-  background: #12201f;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
+  border-bottom: 2px solid black;
+  background-color: black;
 }
 
 nav {
@@ -39,10 +40,22 @@ nav ul {
   list-style: none;
 }
 
+nav ul li a:hover {
+  background: #ffca40;
+  border-radius: 2rem;
+  color: white;
+}
+
+nav ul li a:active {
+  background: #ffca40;
+  border-radius: 2rem;
+  color: white;
+}
+
 nav #logo {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
 }
 
@@ -58,23 +71,26 @@ nav #logo::after {
   -webkit-transform: translate(-10%, -20%);
           transform: translate(-10%, -20%);
   mix-blend-mode: screen;
+  z-index: 2;
 }
 
-nav .order {
+/* Style the active class, and buttons on mouse-over */
+.active,
+.btn:hover {
   background: #ffca40;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
+  border-radius: 50%;
+  color: white;
 }
 
 .showcase {
   display: -ms-grid;
   display: grid;
-  min-height: 50vh;
+  min-height: 90vh;
   -ms-grid-columns: 10% (minmax(5rem, 1fr))[3] 10%;
       grid-template-columns: 10% repeat(3, minmax(5rem, 1fr)) 10%;
   -ms-grid-rows: fit-content(50%) fit-content(50px) fit-content(50%);
       grid-template-rows: fit-content(50%) fit-content(50px) fit-content(50%);
-  color: black;
+  color: white;
 }
 
 .showcase h2 {
@@ -83,16 +99,18 @@ nav .order {
   grid-column: 2/3;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  font-size: 6vh;
+  padding: 5vh 0vh;
 }
 
-.showcase iframe {
+.showcase .fling-minislide {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  height: 40vh;
+  height: 45vh;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-item-align: stretch;
@@ -118,50 +136,6 @@ nav .order {
 .showcase .info h3 {
   padding-bottom: 2rem;
   font-family: "Lobster", sans-serif;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  -webkit-animation-duration: 5s infinite;
-          animation-duration: 5s infinite;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-  position: absolute;
-}
-
-.active {
-  background-color: #717171;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .2;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .features-container {
@@ -192,6 +166,7 @@ nav .order {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  color: black;
 }
 
 .features .cards {
@@ -217,6 +192,8 @@ nav .order {
   text-align: center;
   border-radius: 2rem;
   overflow: hidden;
+  -webkit-box-shadow: 5px 10px #888888;
+          box-shadow: 5px 10px #888888;
 }
 
 .features .cards .card h4 {
@@ -252,10 +229,13 @@ nav .order {
 
 .soon .circle {
   z-index: -1;
+  height: 60vh;
+  width: 60vh;
 }
 
 .soon h2 {
   top: 25%;
+  font-size: 5rem;
 }
 
 .soon img {
@@ -295,6 +275,79 @@ footer h1 {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+}
+
+footer #logo {
+  position: relative;
+}
+
+footer #logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #ffca40;
+  border-radius: 50%;
+  -webkit-transform: translate(-10%, -20%);
+          transform: translate(-10%, -20%);
+  mix-blend-mode: screen;
+}
+
+.fling-minislide {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.fling-minislide img {
+  position: absolute;
+  -webkit-animation: fling-minislide 8s infinite;
+          animation: fling-minislide 8s infinite;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes fling-minislide {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes fling-minislide {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+.fling-minislide img:nth-child(4) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.fling-minislide img:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.fling-minislide img:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.fling-minislide img:nth-child(1) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 html {
@@ -346,16 +399,36 @@ a {
   text-decoration: none;
 }
 
+.newHome {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: radial-gradient(#fef9f3, #131313);
+}
+
+.newHome h1 {
+  margin: 0;
+  color: black;
+}
+
 .home {
-  background: radial-gradient(#fef9f3, #219f94);
+  background: radial-gradient(#fef9f3, #131313);
 }
 
 .nav-container {
-  background: #12201f;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
+  border-bottom: 2px solid black;
+  background-color: black;
 }
 
 nav {
@@ -387,10 +460,22 @@ nav ul {
   list-style: none;
 }
 
+nav ul li a:hover {
+  background: #ffca40;
+  border-radius: 2rem;
+  color: white;
+}
+
+nav ul li a:active {
+  background: #ffca40;
+  border-radius: 2rem;
+  color: white;
+}
+
 nav #logo {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
 }
 
@@ -406,23 +491,26 @@ nav #logo::after {
   -webkit-transform: translate(-10%, -20%);
           transform: translate(-10%, -20%);
   mix-blend-mode: screen;
+  z-index: 2;
 }
 
-nav .order {
+/* Style the active class, and buttons on mouse-over */
+.active,
+.btn:hover {
   background: #ffca40;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
+  border-radius: 50%;
+  color: white;
 }
 
 .showcase {
   display: -ms-grid;
   display: grid;
-  min-height: 50vh;
+  min-height: 90vh;
   -ms-grid-columns: 10% (minmax(5rem, 1fr))[3] 10%;
       grid-template-columns: 10% repeat(3, minmax(5rem, 1fr)) 10%;
   -ms-grid-rows: fit-content(50%) fit-content(50px) fit-content(50%);
       grid-template-rows: fit-content(50%) fit-content(50px) fit-content(50%);
-  color: black;
+  color: white;
 }
 
 .showcase h2 {
@@ -431,16 +519,18 @@ nav .order {
   grid-column: 2/3;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  font-size: 6vh;
+  padding: 5vh 0vh;
 }
 
-.showcase iframe {
+.showcase .fling-minislide {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  height: 40vh;
+  height: 45vh;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-item-align: stretch;
@@ -466,50 +556,6 @@ nav .order {
 .showcase .info h3 {
   padding-bottom: 2rem;
   font-family: "Lobster", sans-serif;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  -webkit-animation-duration: 5s infinite;
-          animation-duration: 5s infinite;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-  position: absolute;
-}
-
-.active {
-  background-color: #717171;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .2;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .features-container {
@@ -540,6 +586,7 @@ nav .order {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  color: black;
 }
 
 .features .cards {
@@ -565,6 +612,8 @@ nav .order {
   text-align: center;
   border-radius: 2rem;
   overflow: hidden;
+  -webkit-box-shadow: 5px 10px #888888;
+          box-shadow: 5px 10px #888888;
 }
 
 .features .cards .card h4 {
@@ -600,10 +649,13 @@ nav .order {
 
 .soon .circle {
   z-index: -1;
+  height: 60vh;
+  width: 60vh;
 }
 
 .soon h2 {
   top: 25%;
+  font-size: 5rem;
 }
 
 .soon img {
@@ -645,6 +697,24 @@ footer h1 {
           flex: 3;
 }
 
+footer #logo {
+  position: relative;
+}
+
+footer #logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #ffca40;
+  border-radius: 50%;
+  -webkit-transform: translate(-10%, -20%);
+          transform: translate(-10%, -20%);
+  mix-blend-mode: screen;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 50%;
@@ -661,18 +731,26 @@ footer h1 {
     -ms-grid-columns: 10% 1fr 10%;
         grid-template-columns: 10% 1fr 10%;
   }
-  .showcase img {
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+  .showcase .fling-minislide {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
   }
-  .showcase img,
+  .showcase .fling-minislide img {
+    position: absolute;
+    -webkit-animation: fling-minislide 20s infinite;
+            animation: fling-minislide 20s infinite;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+  }
   .showcase h2,
   .showcase .info {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
     text-align: center;
+    margin: 5vh;
   }
   .features {
     -webkit-box-align: center;
@@ -695,12 +773,14 @@ footer h1 {
   .soon {
     overflow: hidden;
   }
-  .soon img {
-    width: 60%;
-  }
   .soon h2 {
-    font-size: 5rem;
+    top: 20%;
+    font-size: 4rem;
     text-align: center;
+  }
+  .soon .circle {
+    height: 40vh;
+    width: 40vh;
   }
   footer h1 {
     -webkit-box-flex: 1;
