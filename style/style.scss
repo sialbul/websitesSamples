@@ -1,5 +1,3 @@
-@import "./media";
-@import "./photographer";
 *,
 *::before,
 *::after {
@@ -205,5 +203,128 @@ footer {
     p {
         flex: 1;
         color: white;
+    }
+}
+
+.banner {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.author {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    h1 {
+        font-size: 42px;
+    }
+    h3 {
+        padding: 10px 0px;
+        font-size: 32px;
+    }
+}
+
+.story,
+.my-work {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+.story-description,
+.work-description {
+    width: 80%;
+    h3 {
+        font-size: 36px;
+        padding-bottom: 30px;
+    }
+    p {
+        padding: 20px 0px;
+        font-size: 20px;
+    }
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    img {
+        width: 100%;
+        height: 35vh;
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}
+
+.profile img {
+    height: 50vh;
+    width: 40vh;
+}
+
+@media (max-width: 1024px) {
+    .page {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+    }
+    .hero {
+        grid-column: 2/3;
+        height: auto;
+        img {
+            height: 500px;
+        }
+    }
+    .details {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: center;
+        h2 {
+            font-size: 38px;
+        }
+        h1 {
+            font-size: 48px;
+        }
+    }
+    .story,
+    .my-work {
+        flex-direction: column;
+    }
+    .story-description,
+    .work-description {
+        width: 100%;
+    }
+    .work-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .profile {
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        height: 400px;
+        width: 80%;
+    }
+    .details h1 {
+        font-size: 38px;
+    }
+    .details h2 {
+        font-size: 28px;
     }
 }

@@ -3,8 +3,7 @@ function init() {
     const pages = document.querySelectorAll(".page");
     const backgrounds = [
         `radial-gradient(#2B3760, #0B1023)`,
-        `radial-gradient(#4E3022, #161616)`,
-        `radial-gradient(#006400, #161616)`
+        `radial-gradient(#4E3022, #161616)`
     ];
     //Tracker
     let current = 0;
