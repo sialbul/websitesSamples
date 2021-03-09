@@ -15,21 +15,7 @@ const handle_form_submission = () => {
     return false; //do not submit the form
 }
 
-showSlides();
 
-const showSlides = () => {
-    let i;
-    let slideshow = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slideshow.length; i++) {
-        slideshow[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slideshow.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slideshow[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+AOS.init({
+    duration: 1200,
+})
