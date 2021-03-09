@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/chef.css">
+    <title>Mark Nolan</title>
+</head>
+
+<body>
+    <main>
+        <div class="nav-container">
+            <nav>
+                <h1 id="logo">Mark Nolan</h1>
+                <ul id="sidenav">
+                    <li>
+                        <a href="./chef.html" class="navlink">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" class="navlink">About</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="navlink">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="container">
+            <div style="text-align:center">
+                <h2>Contact Us</h2>
+                <p>Swing by for a cup of coffee, or leave us a message:</p>
+            </div>
+            <form action="/action_page.php" onsubmit="return handle_form_submission()">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer>
+            <h1 id="logo">Mark Nolan</h1>
+            <ul>
+                <li>
+                    <a href="#"><img src="./images/yt-logo.png" alt="youtube logo" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/twitter-logo.png" alt="twitter logo" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/instagram-logo.png" alt="instagram logo" /></a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src=" /index.js ">
+        </script>
+    </main>
+</body>
+
+</html>

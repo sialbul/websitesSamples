@@ -4,7 +4,7 @@ function init() {
     const backgrounds = [
         `radial-gradient(#2B3760, #0B1023)`,
         `radial-gradient(#4E3022, #161616)`,
-        `radial-gradient(#4E4342, #161616)`
+        `radial-gradient(#006400, #161616)`
     ];
     //Tracker
     let current = 0;
@@ -98,6 +98,8 @@ function init() {
         console.log(scrollSlide);
     }
 
+
+    //menu 
     const hamburger = document.querySelector(".menu");
     const hamburgerLines = document.querySelectorAll(".menu line");
     const navOpen = document.querySelector(".nav-open");
@@ -136,22 +138,3 @@ function throttle(func, limit) {
 }
 
 init();
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    let slideshow = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slideshow.length; i++) {
-        slideshow[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slideshow.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slideshow[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}

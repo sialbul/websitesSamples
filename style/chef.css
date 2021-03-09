@@ -41,15 +41,17 @@ nav ul {
 }
 
 nav ul li a:hover {
-  background: #ffca40;
+  background: grey;
   border-radius: 2rem;
   color: white;
+  padding: 1vh;
 }
 
-nav ul li a:active {
+nav ul li .active {
   background: #ffca40;
   border-radius: 2rem;
   color: white;
+  padding: 1vh;
 }
 
 nav #logo {
@@ -72,14 +74,6 @@ nav #logo::after {
           transform: translate(-10%, -20%);
   mix-blend-mode: screen;
   z-index: 2;
-}
-
-/* Style the active class, and buttons on mouse-over */
-.active,
-.btn:hover {
-  background: #ffca40;
-  border-radius: 50%;
-  color: white;
 }
 
 .showcase {
@@ -138,6 +132,10 @@ nav #logo::after {
   font-family: "Lobster", sans-serif;
 }
 
+.showcase .info p {
+  font-size: 2vh;
+}
+
 .features-container {
   background: white;
   position: relative;
@@ -192,8 +190,8 @@ nav #logo::after {
   text-align: center;
   border-radius: 2rem;
   overflow: hidden;
-  -webkit-box-shadow: 5px 10px #888888;
-          box-shadow: 5px 10px #888888;
+  -webkit-box-shadow: 5px 10px #897b7b;
+          box-shadow: 5px 10px #897b7b;
 }
 
 .features .cards .card h4 {
@@ -301,6 +299,8 @@ footer #logo::after {
   padding-bottom: 50%;
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 5px 10px red;
+          box-shadow: 5px 10px red;
 }
 
 .fling-minislide img {
@@ -309,7 +309,7 @@ footer #logo::after {
           animation: fling-minislide 8s infinite;
   opacity: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 @-webkit-keyframes fling-minislide {
@@ -348,6 +348,75 @@ footer #logo::after {
 .fling-minislide img:nth-child(1) {
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
+}
+
+#googleMap {
+  width: 100%;
+  height: 400px;
+}
+
+/* Style inputs */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10vh;
+  text-align: center;
+}
+
+.container h2 {
+  color: black;
+  margin: 5vh;
+}
+
+.container p {
+  margin: 2vh;
+  color: black;
+}
+
+form {
+  color: black;
+  width: 80%;
+  display: inline-block;
+  text-align: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  form,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 html {
@@ -461,15 +530,17 @@ nav ul {
 }
 
 nav ul li a:hover {
-  background: #ffca40;
+  background: grey;
   border-radius: 2rem;
   color: white;
+  padding: 1vh;
 }
 
-nav ul li a:active {
+nav ul li .active {
   background: #ffca40;
   border-radius: 2rem;
   color: white;
+  padding: 1vh;
 }
 
 nav #logo {
@@ -492,14 +563,6 @@ nav #logo::after {
           transform: translate(-10%, -20%);
   mix-blend-mode: screen;
   z-index: 2;
-}
-
-/* Style the active class, and buttons on mouse-over */
-.active,
-.btn:hover {
-  background: #ffca40;
-  border-radius: 50%;
-  color: white;
 }
 
 .showcase {
@@ -558,6 +621,10 @@ nav #logo::after {
   font-family: "Lobster", sans-serif;
 }
 
+.showcase .info p {
+  font-size: 2vh;
+}
+
 .features-container {
   background: white;
   position: relative;
@@ -612,8 +679,8 @@ nav #logo::after {
   text-align: center;
   border-radius: 2rem;
   overflow: hidden;
-  -webkit-box-shadow: 5px 10px #888888;
-          box-shadow: 5px 10px #888888;
+  -webkit-box-shadow: 5px 10px #897b7b;
+          box-shadow: 5px 10px #897b7b;
 }
 
 .features .cards .card h4 {
@@ -787,5 +854,59 @@ footer #logo::after {
         -ms-flex: 1;
             flex: 1;
   }
+}
+
+.work-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[3];
+      grid-template-columns: repeat(3, 200px);
+}
+
+.work-gallery img {
+  width: 100%;
+  height: 35vh;
+}
+
+.profile img {
+  height: 50vh;
+  width: 40vh;
+}
+
+.story,
+.my-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 80px 0px;
+  color: black;
+}
+
+.story h3,
+.my-work h3 {
+  font-family: "Lobster", sans-serif;
+  margin-bottom: 5vh;
+}
+
+.story-description,
+.work-description {
+  width: 80%;
+}
+
+.story-description h3,
+.work-description h3 {
+  font-size: 36px;
+  padding-bottom: 30px;
+}
+
+.story-description p,
+.work-description p {
+  padding: 20px 0px;
+  font-size: 20px;
 }
 /*# sourceMappingURL=chef.css.map */

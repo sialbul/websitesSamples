@@ -3,6 +3,7 @@
 @import "soon";
 @import "footer";
 @import "slide";
+@import "contact";
 html {
     font-size: 62.5%;
 }
@@ -129,5 +130,46 @@ a {
         h1 {
             flex: 1;
         }
+    }
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    img {
+        width: 100%;
+        height: 35vh;
+    }
+}
+
+.profile img {
+    height: 50vh;
+    width: 40vh;
+}
+
+.story,
+.my-work {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+    color: black;
+    h3 {
+        font-family: "Lobster", sans-serif;
+        margin-bottom: 5vh;
+    }
+}
+
+.story-description,
+.work-description {
+    width: 80%;
+    h3 {
+        font-size: 36px;
+        padding-bottom: 30px;
+    }
+    p {
+        padding: 20px 0px;
+        font-size: 20px;
     }
 }
