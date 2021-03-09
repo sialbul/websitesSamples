@@ -198,6 +198,9 @@ nav {
     img {
         width: 100%;
         height: 35vh;
+        &:hover {
+            transform: scale(1.5);
+        }
     }
 }
 
@@ -246,4 +249,28 @@ nav {
 
 .menu {
     cursor: pointer;
+}
+
+footer {
+    min-height: 10vh;
+    background: rgb(225, 150, 150);
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        flex: 2;
+        list-style: none;
+        justify-content: space-between;
+    }
+    h1 {
+        flex: 2;
+        color: white;
+    }
+    p {
+        flex: 1;
+        color: white;
+    }
 }

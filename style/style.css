@@ -345,6 +345,11 @@ nav {
   height: 35vh;
 }
 
+.work-gallery img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 .profile img {
   height: 50vh;
   width: 40vh;
@@ -399,5 +404,48 @@ nav {
 
 .menu {
   cursor: pointer;
+}
+
+footer {
+  min-height: 10vh;
+  background: #e19696;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer h1 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  color: white;
+}
+
+footer p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
