@@ -196,7 +196,7 @@
      justify-content: space-between;
      ul {
          display: flex;
-         flex: 2;
+         flex: 4;
          list-style: none;
          justify-content: space-between;
      }
@@ -205,8 +205,10 @@
          color: white;
      }
      p {
-         flex: 1;
          color: white;
+     }
+     a {
+         text-decoration: none;
      }
  }
  
@@ -252,11 +254,10 @@
          text-align: center;
      }
      #emailAdress {
-         visibility: hidden;
+         display: none;
      }
      #emailLogo {
          visibility: visible;
-         padding: 5vh;
          color: white;
      }
  }
@@ -278,7 +279,7 @@
          text-align: center;
      }
      #emailAdress {
-         visibility: hidden;
+         display: none;
      }
      #emailLogo {
          visibility: visible;
