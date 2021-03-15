@@ -1,3 +1,133 @@
+input[type="checkbox"] {
+  z-index: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: fixed;
+  top: 5vh;
+  left: 5vh;
+}
+
+input[type="checkbox"]:before {
+  content: "Dark";
+  background: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+input[type="checkbox"]:checked:before {
+  content: "Light";
+  background: white;
+  color: black;
+}
+
+input[type="checkbox"]:checked ~ * {
+  background-color: black !important;
+  color: white;
+}
+
+input[type="checkbox"]:checked ~ * footer {
+  background-color: black !important;
+}
+
+.banner {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+
+.author {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -70%);
+          transform: translate(-50%, -70%);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.author h1 {
+  font-size: 42px;
+}
+
+.author h3 {
+  padding: 10px 0px;
+  font-size: 32px;
+}
+
+.story,
+.my-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 80px 10px;
+}
+
+input[type="checkbox"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.story-description h3,
+.work-description h3 {
+  font-size: 36px;
+  padding-bottom: 30px;
+}
+
+.story-description p,
+.work-description p {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+
+.work-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[3];
+      grid-template-columns: repeat(3, 200px);
+}
+
+.work-gallery img {
+  width: 100%;
+  height: 35vh;
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+
+.work-gallery img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.profile img {
+  height: 50vh;
+  width: 40vh;
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+
 *,
 *::before,
 *::after {
@@ -113,6 +243,8 @@ nav {
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   cursor: pointer;
+  -webkit-filter: inherit;
+          filter: inherit;
 }
 
 .hero a {
@@ -292,91 +424,8 @@ footer p {
   color: white;
 }
 
-.banner {
-  height: 50vh;
-  width: 100%;
-  position: relative;
-}
-
-.banner img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.author {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -70%);
-          transform: translate(-50%, -70%);
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.author h1 {
-  font-size: 42px;
-}
-
-.author h3 {
-  padding: 10px 0px;
-  font-size: 32px;
-}
-
-.story,
-.my-work {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90%;
-  margin: auto;
-  padding: 80px 0px;
-}
-
-.story-description,
-.work-description {
-  width: 80%;
-}
-
-.story-description h3,
-.work-description h3 {
-  font-size: 36px;
-  padding-bottom: 30px;
-}
-
-.story-description p,
-.work-description p {
-  padding: 20px 0px;
-  font-size: 20px;
-}
-
-.work-gallery {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (200px)[3];
-      grid-template-columns: repeat(3, 200px);
-}
-
-.work-gallery img {
-  width: 100%;
-  height: 35vh;
-}
-
-.work-gallery img:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-}
-
-.profile img {
-  height: 50vh;
-  width: 40vh;
+#emailLogo {
+  visibility: hidden;
 }
 
 @media (max-width: 1024px) {
@@ -420,10 +469,6 @@ footer p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .story-description,
-  .work-description {
-    width: 100%;
-  }
   .work-gallery {
     display: -ms-grid;
     display: grid;
@@ -433,6 +478,14 @@ footer p {
   .profile {
     padding-top: 30px;
     text-align: center;
+  }
+  #emailAdress {
+    visibility: hidden;
+  }
+  #emailLogo {
+    visibility: visible;
+    padding: 5vh;
+    color: white;
   }
 }
 
@@ -446,6 +499,19 @@ footer p {
   }
   .details h2 {
     font-size: 28px;
+  }
+  .story-description,
+  .work-description {
+    width: 100%;
+    text-align: center;
+  }
+  #emailAdress {
+    visibility: hidden;
+  }
+  #emailLogo {
+    visibility: visible;
+    height: 2vh;
+    width: 2vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

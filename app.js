@@ -1,3 +1,4 @@
+//main page animation-background color chage when scroll the page or click the dots on the side
 function init() {
     const slides = document.querySelectorAll(".slide");
     const pages = document.querySelectorAll(".page");
@@ -98,7 +99,7 @@ function init() {
     }
 
 
-    //menu 
+    //menu navbar open on the main page
     const hamburger = document.querySelector(".menu");
     const hamburgerLines = document.querySelectorAll(".menu line");
     const navOpen = document.querySelector(".nav-open");

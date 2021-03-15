@@ -1,0 +1,32 @@
+//dark mode
+input[type="checkbox"] {
+    z-index: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+}
+
+input[type="checkbox"]:before {
+    content: "Dark";
+    background: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "Light";
+    background: white;
+    color: black;
+}
+
+input[type="checkbox"]:checked~* {
+    background-color: black !important;
+    color: white;
+    footer {
+        background-color: black !important;
+    }
+}
