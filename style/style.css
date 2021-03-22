@@ -6,7 +6,7 @@ input[type="checkbox"] {
   appearance: none;
   position: fixed;
   top: 5vh;
-  left: 5vh;
+  right: 5vh;
 }
 
 input[type="checkbox"]:before {
@@ -20,6 +20,10 @@ input[type="checkbox"]:checked:before {
   content: "Light";
   background: white;
   color: black;
+}
+
+input[type="checkbox"]:checked:before .fontSize {
+  color: white;
 }
 
 input[type="checkbox"]:checked ~ * {
@@ -58,13 +62,8 @@ input[type="checkbox"]:checked ~ * footer {
   text-align: center;
 }
 
-.author h1 {
-  font-size: 42px;
-}
-
 .author h3 {
   padding: 10px 0px;
-  font-size: 32px;
 }
 
 .story,
@@ -92,14 +91,12 @@ input[type="checkbox"] {
 
 .story-description h3,
 .work-description h3 {
-  font-size: 36px;
   padding-bottom: 30px;
 }
 
 .story-description p,
 .work-description p {
   padding: 20px 0px;
-  font-size: 20px;
 }
 
 .work-gallery {
@@ -513,5 +510,16 @@ footer a {
     height: 2vh;
     width: 2vh;
   }
+}
+
+.fontSize {
+  z-index: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: fixed;
+  top: 12vh;
+  right: 5vh;
 }
 /*# sourceMappingURL=style.css.map */

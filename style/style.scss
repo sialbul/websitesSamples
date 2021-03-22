@@ -287,3 +287,14 @@
          width: 2vh;
      }
  }
+ 
+ .fontSize {
+     z-index: 1;
+     cursor: pointer;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     position: fixed;
+     top: 12vh;
+     right: 5vh;
+ }

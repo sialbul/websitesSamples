@@ -7,7 +7,7 @@ input[type="checkbox"] {
     appearance: none;
     position: fixed;
     top: 5vh;
-    left: 5vh;
+    right: 5vh;
 }
 
 input[type="checkbox"]:before {
@@ -21,6 +21,9 @@ input[type="checkbox"]:checked:before {
     content: "Light";
     background: white;
     color: black;
+    .fontSize {
+        color: white;
+    }
 }
 
 input[type="checkbox"]:checked~* {

@@ -1,3 +1,8 @@
+//change the font size
+$("#fader").on("input", function() {
+    $('#content').css("font-size", $(this).val() + "px");
+});
+
 //chef navbar-background color change when the page is active
 function setActive() {
     aObj = document.getElementById('sidenav').getElementsByClassName('navlink');
