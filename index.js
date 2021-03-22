@@ -1,3 +1,8 @@
+//AOS animation call
+AOS.init({
+    duration: 1200,
+})
+
 //change the font size
 $("#fader").on("input", function() {
     $('#content').css("font-size", $(this).val() + "px");
@@ -20,9 +25,3 @@ const handle_form_submission = () => {
     alert('Message sent it.');
     return false; //do not submit the form
 }
-
-
-//AOS animation call
-AOS.init({
-    duration: 1200,
-})
