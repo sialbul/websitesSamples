@@ -33,7 +33,7 @@
                 <h2>Contact Us</h2>
                 <p>Swing by for a cup of coffee, or leave us a message:</p>
             </div>
-            <form action="/action_page.php" onsubmit="return handle_form_submission()">
+            <form>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 <label for="lname">Last Name</label>
@@ -46,7 +46,8 @@
                 </select>
                 <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                <input type="submit" value="Submit">
+                <button id="submitButton" onclick="handle_form_submission()">Submit</button>
+
             </form>
         </main>
         <footer>
@@ -64,7 +65,7 @@
             </ul>
         </footer>
 
-        <script src=" /index.js ">
+        <script src="./index.js ">
         </script>
     </main>
 </body>

@@ -619,4 +619,10 @@ a {
   padding: 20px 0px;
   font-size: 20px;
 }
+
+#submitButton {
+  background-color: green;
+  padding: 5px;
+  color: white;
+}
 /*# sourceMappingURL=chef.css.map */

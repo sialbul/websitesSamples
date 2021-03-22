@@ -1,3 +1,8 @@
+//Contact page- form submit
+const handle_form_submission = () => {
+    alert('Message sent it.');
+}
+
 //AOS animation call
 AOS.init({
     duration: 1200,
@@ -18,10 +23,3 @@ function setActive() {
     }
 }
 window.onload = setActive();
-
-
-//Contact page- form submit
-const handle_form_submission = () => {
-    alert('Message sent it.');
-    return false; //do not submit the form
-}
