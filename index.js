@@ -1,15 +1,10 @@
-//AOS animation call
-AOS.init({
-    duration: 1200,
-})
-
 //change the font size
 $("#fader").on("input", function() {
     $('#content').css("font-size", $(this).val() + "px");
 });
 
 //chef navbar-background color change when the page is active
-function setActive() {
+const setActive = () => {
     aObj = document.getElementById('sidenav').getElementsByClassName('navlink');
     for (i = 0; i < aObj.length; i++) {
         if (document.location.href.indexOf(aObj[i].href) >= 0) {
@@ -19,7 +14,10 @@ function setActive() {
 }
 window.onload = setActive();
 
-
+//AOS animation call
+AOS.init({
+    duration: 1200,
+})
 
 const validate = () => {
     let name = document.getElementById("name").value;
