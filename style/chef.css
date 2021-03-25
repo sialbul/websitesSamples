@@ -1,5 +1,7 @@
 .home {
-  background: radial-gradient(#fef9f3, #131313);
+  background-image: url("../images/cool-background.png");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
 }
 
 .nav-container {
@@ -84,7 +86,7 @@ nav #logo::after {
       grid-template-columns: 10% repeat(3, minmax(5rem, 1fr)) 10%;
   -ms-grid-rows: fit-content(50%) fit-content(50px) fit-content(50%);
       grid-template-rows: fit-content(50%) fit-content(50px) fit-content(50%);
-  color: white;
+  color: black;
 }
 
 .showcase h2 {
