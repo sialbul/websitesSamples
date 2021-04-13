@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #nav {
@@ -17,7 +17,11 @@ body {
           align-items: center;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-  padding: 2vh;
+  padding: 1vh 10vh;
+}
+
+#logo {
+  font-size: 5vh;
 }
 
 #topHead {
@@ -28,7 +32,7 @@ body {
           align-items: center;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  padding: 2vh;
+  padding: 1vh 10vh;
   background: orange;
   color: antiquewhite;
 }
@@ -64,29 +68,68 @@ ul li {
   position: relative;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+ul li:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+  -webkit-text-decoration-color: orangered;
+          text-decoration-color: orangered;
+  text-underline-position: under;
+  text-decoration-thickness: 4px;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+ul li a:hover {
+  font-weight: 2vh;
+}
+
+.dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dropdown li {
+  position: relative;
+  padding: 8px;
+}
+
+.dropdown li:hover > ul {
+  display: block;
   text-decoration: none;
-  display: block;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.dropdown ul {
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  /* Absolute position */
+  left: 0;
+  position: absolute;
+  top: 100%;
+  /* Width */
+  width: 200px;
+  font-weight: bolder;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown ul ul {
+  left: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#nav > ul > li > ul > li {
+  font-weight: normal;
+}
+
+#nav > ul > li > ul > li:hover {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+#nav > ul > li > ul > li > ul > li {
+  font-weight: normal;
+}
+
+#nav > ul > li > ul > li > ul > li:hover {
+  text-decoration: none;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=onepage.css.map */

@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+@property --maskStart {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: -90deg;
+}
+
+@property --maskEnd {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 360deg;
+}
+
+body {
+    --bg: white;
+    --size: clamp(300px, 80vw, 100px);
+    --start: 20%;
+    --w: calc(30% / 20);
+    --top: conic-gradient(from var(--maskStart, 90deg) at center, var(--bg) var(--maskEnd, 180deg), transparent 0);
+    --rainbow: radial-gradient(circle at center, transparent var(--start), black 0, black calc(var(--start) + var(--w)), #495464 0, #495464 calc(var(--start) + (var(--w) * 2)), #BBBFCA 0, #BBBFCA calc(var(--start) + (var(--w) * 3)), #E8E8E8 0, #E8E8E8 calc(var(--start) + (var(--w) * 4)), #F4F2F2 0, #F4F2F2 calc(var(--start) + (var(--w) * 5)), orange 0, orange calc(var(--start) + (var(--w) * 6)), red 0, red calc(var(--start) + (var(--w) * 7)), transparent 0);
+    margin: 0;
+    min-height: 100vh;
+    background: var(--top), var(--rainbow), var(--bg);
+    background-size: var(--size) calc(var(--size) * 0.35);
+    background-position: center 5vh;
+    animation: draw 6200ms forwards infinite cubic-bezier(.33, .19, .32, 1);
+    /*cubic-bezier(x1,y1,x2,y2) Required. Numeric values. x1 and x2 must be a number from 0 to 1*/
+}
+
+@keyframes draw {
+    40% {
+        --maskStart: 90deg;
+        --maskEnd: 180deg;
+    }
+    80% {
+        --maskStart: 90deg;
+        --maskEnd: 360deg;
+    }
+}
