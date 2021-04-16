@@ -357,6 +357,50 @@ footer #logo::after {
 
 /* Style the container/contact section */
 .container {
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  margin-top: 1vh;
+  -ms-grid-rows: 1fr 2fr;
+      grid-template-rows: 1fr 2fr;
+}
+
+#contactHead {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#map {
+  height: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+#form {
+  color: black;
+  text-align: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+#myform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,6 +408,12 @@ footer #logo::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   margin: auto;
   max-width: 350px;
   width: 100%;
@@ -374,31 +424,23 @@ footer #logo::after {
           box-shadow: 4px 4px 2px #feeca4;
 }
 
-.container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #332902;
-}
-
-.container .input_field {
+#myform .input_field {
   margin-bottom: 10px;
 }
 
-.container .input_field input[type="text"],
-.container .input_field .wrapper textarea {
+#myform .input_field input[type="text"],
+#myform .input_field .wrapper textarea {
   border: 1px solid #e0e0e0;
   width: 100%;
   padding: 10px;
 }
 
-.container textarea {
+#myform textarea {
   resize: none;
   height: 80px;
 }
 
-.container .btn input[type="submit"] {
+#myform .btn input[type="submit"] {
   border: 0px;
   margin-top: 15px;
   padding: 10px;
@@ -414,13 +456,40 @@ footer #logo::after {
 }
 
 #error_message {
-  margin-bottom: 20px;
-  background: #fe8b8e;
+  margin: 2vh 0vh;
+  height: 5vh;
   padding: 0px;
   text-align: center;
   font-size: 14px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  color: black;
+}
+
+textarea {
+  border: none;
+}
+
+textarea::-webkit-input-placeholder {
+  text-align: left;
+}
+
+textarea:-ms-input-placeholder {
+  text-align: left;
+}
+
+textarea::-ms-input-placeholder {
+  text-align: left;
+}
+
+textarea::placeholder {
+  text-align: left;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */

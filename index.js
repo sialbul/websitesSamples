@@ -58,3 +58,13 @@ const validate = () => {
     alert("Form Submitted Successfully!");
     return true;
 }
+
+let map;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 41.392688805298164, lng: -81.45183099856035 },
+
+        zoom: 8,
+    });
+}
