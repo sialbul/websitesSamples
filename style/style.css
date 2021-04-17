@@ -125,6 +125,30 @@ input[type="checkbox"] {
           filter: inherit;
 }
 
+@media (max-width: 1024px) {
+  .story,
+  .my-work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .story-description,
+  .work-description {
+    width: 100%;
+  }
+  .work-gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .profile {
+    padding-top: 30px;
+    text-align: center;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -464,8 +488,8 @@ footer a {
   .my-work {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: flex;
+            flex-direction: flex;
   }
   .work-gallery {
     display: -ms-grid;
