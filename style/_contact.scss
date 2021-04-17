@@ -80,11 +80,14 @@
     transition: all 0.5s ease;
     grid-row: 3/4;
     grid-column: 2/3;
-    color: black;
+    color: red;
 }
 
 textarea {
-    border: none;
+    border: 1px rgba(128, 128, 128, 0.279) solid;
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
     &::placeholder {
         text-align: left;
     }

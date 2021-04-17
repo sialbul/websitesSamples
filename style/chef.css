@@ -469,11 +469,14 @@ footer #logo::after {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  color: black;
+  color: red;
 }
 
 textarea {
-  border: none;
+  border: 1px rgba(128, 128, 128, 0.279) solid;
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
 }
 
 textarea::-webkit-input-placeholder {
