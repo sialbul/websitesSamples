@@ -243,7 +243,6 @@ nav #logo::after {
 }
 
 footer {
-  margin-top: 10vh;
   min-height: 10vh;
   background: black;
   padding-left: 10%;
@@ -446,7 +445,7 @@ footer #logo::after {
   padding: 10px;
   text-align: center;
   width: 100%;
-  background: #fece0c;
+  background-color: #fece0c;
   color: #332902;
   text-transform: uppercase;
   letter-spacing: 5px;

@@ -1,4 +1,6 @@
 //dark mode
+$dark: black;
+$light: white;
 input[type="checkbox"] {
     z-index: 1;
     cursor: pointer;
@@ -12,24 +14,24 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:before {
     content: "Dark";
-    background: black;
-    color: white;
+    background: $dark;
+    color: $light;
     padding: 10px 20px;
 }
 
 input[type="checkbox"]:checked:before {
     content: "Light";
-    background: white;
-    color: black;
+    background: $light;
+    color: $dark;
     .fontSize {
-        color: white;
+        color: $light;
     }
 }
 
 input[type="checkbox"]:checked~* {
-    background-color: black !important;
-    color: white;
+    background-color: $dark !important;
+    color: $light;
     footer {
-        background-color: black !important;
+        background-color: $dark !important;
     }
 }
