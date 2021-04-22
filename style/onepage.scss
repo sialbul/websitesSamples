@@ -49,18 +49,24 @@ body {
 ul {
     display: flex;
     justify-content: space-evenly;
+    background-color: white;
     li {
         list-style-type: none;
         position: relative;
-        &:hover {
-            font-weight: bolder;
-            text-decoration: underline;
-            text-decoration-color: $dOrange;
-            text-underline-position: under;
-            text-decoration-thickness: 4px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $orange;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
         }
-        a:hover {
-            font-weight: 2vh;
+        &:hover:before {
+            visibility: visible;
+            width: 100%;
         }
     }
 }
@@ -201,7 +207,7 @@ h2 {
 }
 
 h3 {
-    color: $orange;
+    color: $dOrange;
     border-bottom: 4px solid $black;
     margin-bottom: 2vh;
     padding-bottom: 1vh;

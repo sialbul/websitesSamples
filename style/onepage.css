@@ -62,6 +62,7 @@ ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background-color: white;
 }
 
 ul li {
@@ -69,17 +70,22 @@ ul li {
   position: relative;
 }
 
-ul li:hover {
-  font-weight: bolder;
-  text-decoration: underline;
-  -webkit-text-decoration-color: orangered;
-          text-decoration-color: orangered;
-  text-underline-position: under;
-  text-decoration-thickness: 4px;
+ul li:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-ul li a:hover {
-  font-weight: 2vh;
+ul li:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 .dropdown {
@@ -253,7 +259,7 @@ h2 {
 }
 
 h3 {
-  color: orange;
+  color: orangered;
   border-bottom: 4px solid black;
   margin-bottom: 2vh;
   padding-bottom: 1vh;
