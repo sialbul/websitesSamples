@@ -1,0 +1,28 @@
+main {
+    margin: auto;
+    width: 100vh;
+    height: 70vh;
+    background-color: pink;
+}
+
+two-up {
+    max-width: 100vh;
+}
+
+.dark,
+.light {
+    display: inline-block;
+    font-size: 3em;
+    font-weight: bold;
+    background-color: #0e141b;
+    color: #fff;
+    height: 70vh;
+    max-width: 100vh;
+    line-height: 300px;
+    text-align: center;
+}
+
+.light {
+    background-color: #fff;
+    color: #0e141b;
+}
